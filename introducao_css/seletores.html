@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores, Propriedades e Valores</title>
+
+     <!--todos os p são vermelhos, mas os que estiverem na classe destaque serão vermelhos -->
+    <style>
+        p {
+            color:red;
+        }
+        .destaque {
+            color: blue
+        }
+        #titulo {
+            color: green
+        }
+        input [type="text"] {
+            border: 1px solid red 
+        }
+        div > p {
+            color: purple;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <H3>Tipos de Seletores</H3>
+    <h4>Seletor Por TAG:</h4>
+    <p>Resultado do seletor por tag</p>
+
+    <h4>Seletor por CLASSE:</h4>
+    <p class="destaque"> Resultado do seletor por classe</p>
+
+    <h4>Seletor por ID:</h4>
+    <p id="titulo"> Resultado do seletor por id</p>
+
+    <h4>Seletor por ATRIBUTO:</h4>
+    <input type="text" placeholder="Campo de texto">
+    <input type="password" placeholder="Campo de senha">
+
+    <div>
+         <h4>Seletor por pseudo-classe:</h4>
+        <p> Resultado do seletor por pseudo-classe</p>
+    </div>
+
+
+
+</body>
+</html>
