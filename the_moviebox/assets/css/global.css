@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: #ededed;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+}
+
+/*header - cabeçalho*/
+
+header { 
+    padding: 1rem 2rem;   /*aqui está sendo usado y x*/ /*ordem: t r b l*/
+
+    /*adicionar aqui as config flutuantes*/
+    
+}
+
+header .container {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+header h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ffffff;
+
+}
+
+/*main - principal*/
+
+/*footer - rodapé*/

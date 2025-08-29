@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/global.css">
     <title>The MovieBox</title>
 </head>
 <body>
     
     <header>
-        <div class="container">
+        <div class="container"> <!--serve para voce incorporar todos os elementos e manter uma largura fixa-->
             <h1>THE MOVIEBOX</h1>
                 <div class="actions">
                     <a href="#">Entrar</a>
@@ -48,6 +50,8 @@
                 </div>
 
             </section>
+
+
             <nav>
                 <ol>
                     <li><a href="#">Mais Assistidos</a></li>
@@ -56,13 +60,104 @@
                     <li><a href="#">Gêneros</a></li>
                 </ol>
             </nav>
-            <section></section>
+
+
+            <section>
+                <!--essa div de movie-card será replicada-->
+                <div class="movie-card">
+                    <img src="assets/img/Y6pjszkKQUZ5uBbiGg7KWiCksJ.jpg" alt="Lilo & Stitch">
+                    <h3>Lilo & Stitch</h3>
+                    <p>2025</p>
+                </div>
+
+                <div class="movie-card">
+                    <img src="assets/img/2VUmvqsHb6cEtdfscEA6fqqVzLg.jpg" alt="Ballerina">
+                    <h3>Ballerina</h3>
+                    <p>2025</p>
+                </div>
+
+                <div class="movie-card">
+                    <img src="assets/img/4a63rQqIDTrYNdcnTXdPsQyxVLo.jpg" alt="Megan 2.0">
+                    <h3>Megan 2.0</h3>
+                    <p>2025</p>
+                </div>
+
+                <div class="movie-card">
+                    <img src="assets/img/4CkZl1LK6a5rXBqJB2ZP77h3N5i.jpg" alt="Sinners">
+                    <h3>Sinners</h3>
+                    <p>2025</p>
+                </div>
+
+                <div class="movie-card">
+                    <img src="assets/img/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg" alt="Thunderbolts*">
+                    <h3>Thunderbolts*</h3>
+                    <p>2025</p>
+                </div>
+
+                <div class="movie-card">
+                    <img src="assets/img/9PXZIUsSDh4alB80jheWX4fhZmy.jpg" alt="F1">
+                    <h3>F1</h3>
+                    <p>2025</p>
+                </div>
+
+                <div class="movie-card">
+                    <img src="assets/img/ktqPs5QyuF8SpKnipvVHb3fwD8d.jpg" alt="F1">
+                    <h3>The Ritual</h3>
+                    <p>2025</p>
+                </div>
+
+                <div class="movie-card">
+                    <img src="assets/img/ombsmhYUqR4qqOLOxAyr5V8hbyv.jpg" alt="Superman">
+                    <h3>Superman</h3>
+                    <p>2025</p>
+                </div>
+
+                <div class="movie-card">
+                    <img src="assets/img/lVgE5oLzf7ABmzyASEVcjYyHI41.jpg" alt="Heads of states">
+                    <h3>Heads of states</h3>
+                    <p>2025</p>
+                </div>
+
+                <div class="movie-card">
+                    <img src="assets/img/rij9Eh4RVXyPet8A1BNU8pDvtmu.jpg" alt="The Hangman">
+                    <h3>The Hangman</h3>
+                    <p>2025</p>
+                </div>
+
+                <div class="movie-card">
+                    <img src="assets/img/SNEoUInCa5fAgwuEBMIMBGvkkh.jpg" alt="The Amateur">
+                    <h3>The Amateur</h3>
+                    <p>2025</p>
+                </div>
+
+                <div class="movie-card">
+                    <img src="assets/img/q0fGCmjLu42MPlSO9OYWpI5w86I.jpg" alt="Jurassic World Rebirth">
+                    <h3>Jurassic World Rebirth</h3>
+                    <p>2025</p>
+                </div>
+
+
+            </section>
         </div>
     </main>
 
     <footer>
-        <div class="container"></div>
+        <div class="container">
+            <p>The MovieBox 2025 - Todos os direitos reservados.</p>
+            <ul>
+                <li><a href="#"><i data-lucide="instagram"></i></a></li>
+                <li><a href="#"><i data-lucide="facebook"></i></a></li>
+                <li><a href="#"><i data-lucide="youtube"></i></a></li>
+            </ul>
+
+        </div>
+
     </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 
 </body>
 </html>
