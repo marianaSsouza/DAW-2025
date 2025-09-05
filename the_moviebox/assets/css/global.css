@@ -6,42 +6,35 @@
 }
 
 body {
-    background-color: #1c1c1c; /*cor de fundo padrão*/
-    color: #ededed; /*cor de fonte padrão*/
+    font-family: "Roboto", sans-serif; /*fonte padrão*/
     font-style: normal;
-    font-family: 'Roboto', sans-serif; /*fonte padrão*/
-    font-weight: 400; /*peso da fonte padrão*/
     font-optical-sizing: auto;
+    background-color: #1c1c1c; /*cor de fundo padrão*/
+    color: #ededed; /*cor da fonte padrão*/
 }
 
 .container {
-    max-width: 1140px; /*largura máxima do container*/
-    margin: 0 auto; /*centraliza o container, deixando automático à direita e à esquerda*/
+    margin: 0 auto; /*centraliza o container*/
+    max-width: 1140px; /*limita a largura máxima*/
 }
 
-/*header - cabeçalho*/
-
-header { 
-    padding: 1rem 2rem;   /*aqui está sendo usado y x*/ /*ordem: t r b l*/
-    /*adicionar aqui as config flutuantes*/ 
+/* HEADER - CABEÇALHO */
+header {
+    padding: 1rem 2rem; /*espaçamento interno do cabeçalho (y x)*/
+    /* TO-DO: adicionar aqui as configurações flutuantes */
 }
 
 header .container {
-    display: flex; 
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; 
+    display: flex; /*coloca os itens lado a lado*/
+    justify-content: space-between; /*espaço igual entre logo e ações*/
+    align-items: center; /*alinha verticalmente ao centro*/
 }
 
 header h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #ffffff;
-}
-
-header h1 span {
-    font-weight: 400; /*cor do span*/
+    font-size: 1.5rem; /*tamanho da fonte do logo/título*/
+    font-weight: bold; /*negrito*/
+    letter-spacing: 1px; /*espaçamento entre letras*/
+    color: #ffffff; /*cor da fonte*/
 }
 
 header .actions {
@@ -49,130 +42,129 @@ header .actions {
     gap: 1rem; /*espaçamento entre os botões*/
 }
 
+header h1 span {
+    font-weight: 400; /*peso mais leve do span*/
+}
+
 header .actions .btn-auth {
-    color: #ffffff;
-    text-decoration: none; /*isso muda o sublinhado do link*/
-    font-size: 0.8rem; /*80% de 16, vai ser como uma fonte tamanho 13*/
-    padding: 0.5rem 1rem; /*espaçamento interno do botão*/
-    border: 1px solid #333; /*primeiro elemento é a espessura, o segundo é o tipo e o terceiro é a cor*/
-    border-radius: 4px; /*arredondamento dos cantos do botão*/
-    transition: all 0.3s ease; /*transição suave para todas as propriedades que mudam, com duração de 0.3 segundos e efeito de facilidade*/
+    color: #ffffff; /*cor da fonte*/
+    text-decoration: none; /*remove sublinhado*/
+    font-size: 0.8rem; /*tamanho reduzido da fonte*/
+    padding: 0.5rem 1rem; /*espaçamento interno*/
+    border: 1px solid #333; /*cor e espessura da borda*/
+    border-radius: 4px; /*cantos arredondados*/
+    transition: all 0.3s ease; /*animação suave no hover*/
 }
 
 header .actions .btn-auth:hover {
-    background-color: #333; /*cor de fundo do botão quando o mouse passar por cima*/
-    border-color: #555; /*cor da borda do botão quando o mouse passar por cima*/
+    background-color: #333; /*cor de fundo quando passa o mouse*/
 }
 
 header .actions .btn-signup {
-    margin-left: 0.5rem; /*espaçamento entre os botões*/
-    background-color: #e50914; /*cor de fundo do botão de registro*/
-    border-color: #e50914; /*cor da borda do botão de registro*/
+    background-color: #e50914; /*cor de fundo do botão destaque*/
+    border-color: #e50914; /*cor da borda*/
 }
 
 header .actions .btn-signup:hover {
-    background-color: #b8070f; /*cor de fundo do botão quando o mouse passar por cima*/
+    background-color: #b8070f; /*escurece no hover*/
 }
 
-/*main - principal*/
-
+/* MAIN - PRINCIPAL */
 main {
-    min-height: 100vh; /*altura mínima do main, esse 100vh é que na altura vertical ele vai usar 100%*/
+    min-height: 100vh; /*altura mínima de 100% da tela*/
 }
 
 .highlight {
-    display: flex; /*alinha os elementos na horizontal*/
-    background-image: url('../img/etT14XfDEqhQZdD47ywpyihXPyW.jpg');
-    background-position: left calc((50vh - 170px) - 340) top;
-
+    display: flex; /*coloca poster e detalhes lado a lado*/
+    background-image: url('../img/etT14XfDEqhQZdD47ywpyihXPyW.jpg'); /*imagem de fundo*/
+    background-position: left calc((50vw -170px) - 340px) top; /*ajuste da posição do fundo*/
+    background-size: cover; /*faz a imagem cobrir toda a área*/
 }
 
 .highlight .highlight-content {
-    display: flex; /*alinha os elementos na horizontal*/
-    gap: 2rem; /*espaçamento entre os elementos*/
-    padding: 2rem 0; /*espaçamento interno do destaque*/
-    
+    display: flex; /*coloca poster e textos lado a lado*/
+    gap: 2rem; /*espaçamento entre poster e texto*/
+    padding: 2rem 0; /*espaçamento vertical*/
 }
 
 .highlight .highlight-poster {
-    border-radius: 0.5rem; /*arredondamento dos cantos da imagem*/
+    border-radius: 0.5rem; /*arredondamento do poster*/
 }
 
-.highlight .highlight-detail {
+.highlight .highlight-details {
     display: flex;
-    flex-direction: column; /*alinha os elementos na vertical*/
+    flex-direction: column; /*alinha elementos na vertical*/
 }
 
-.highlight .highlight-detail h2 {
-    font-size: 2.5rem;
-    font-weight: 400;
+.highlight .highlight-details h2 {
+    font-size: 2.5rem; /*título grande*/
+    font-weight: 400; /*peso regular*/
 }
 
 .highlight .highlight-meta {
-    font-size: 0.8rem;
-    margin: 0.6rem 0; /*espaçamento entre os elementos*/
+    font-size: 0.8rem; /*detalhes pequenos*/
+    margin: 0.6rem 0; /*espaçamento vertical*/
 }
 
 .highlight .highlight-meta .genre {
-    background-color: rgba(255, 255, 255, 0.2); /*cor de fundo do gênero*/
-    padding: 0.3rem 0.8rem; /*espaçamento interno do gênero*/
-    border-radius: 20px; /*arredondamento dos cantos do gênero*/
+    background-color: rgba(255, 255, 255, 0.2); /*fundo semitransparente*/
+    padding: 0.3rem 0.8rem; /*espaçamento interno*/
+    border-radius: 20px; /*formato de pílula*/
 }
 
 .highlight .highlight-meta .duration {
-    padding-left: 1rem; /*espaçamento entre os elementos*/
-    color: #ccc;
+    padding-left: 1rem; /*espaço antes da duração*/
+    color: #ccc; /*cinza claro*/
 }
 
 .highlight .highlight-sinopse {
     display: flex;
-    flex-direction: column; /*alinha os elementos na vertical*/
-    gap: 0.5rem; /*espaçamento entre os elementos*/
+    flex-direction: column; /*texto em coluna*/
+    gap: 0.5rem; /*espaçamento entre elementos*/
 }
 
-.highlight .highlight-sinopse h3 {
-    font-weight: 400;
-    padding-top: 3rem;
-    padding-bottom: 0.5rem;
+.highlight .highlight-sinopse h4 {
+    font-weight: 400; /*peso normal*/
+    padding-top: 3rem; /*espaço antes do subtítulo*/
+    padding-bottom: 0.5rem; /*espaço abaixo*/
 }
 
 .highlight .highlight-sinopse p {
-    color: #a0a0a0; /* cor do texto */
-    font-size: 0.8rem; /* tamanho da fonte */
+    color: #a0a0a0; /*cor do texto*/
+    font-size: 0.8rem; /*tamanho menor*/
 }
 
 .highlight .highlight-actions {
-    display: flex; /*alinha os elementos na horizontal*/
-    gap: 1rem; /*espaçamento entre os elementos*/
-    margin: 1.5rem; /*espaçamento entre os elementos*/
+    display: flex; /*botões lado a lado*/
+    gap: 1rem; /*espaço entre botões*/
+    margin: 1.5rem 0; /*espaçamento externo*/
 }
 
 .highlight .highlight-actions .btn-primary {
-    background-color: #e50914; /*cor de fundo do botão primário*/
-    border: none; /*remove a borda do botão primário*/
-    color: #fff; /*cor da fonte do botão primário*/
-    padding: 0.8rem 1.5rem; /*espaçamento interno do botão primário*/
-    border-radius: 4px; /*arredondamento dos cantos do botão primário*/
-    transition: background-color 0.3s ease; /*transição suave para a cor de fundo do botão primário*/
-    font-weight: bold;
-    cursor: pointer; /*muda o cursor para pointer quando o mouse passar por cima do botão primário*/
+    background-color: #e50914; /*vermelho destaque*/
+    color: #fff; /*fonte branca*/
+    border: none; /*sem borda*/
+    padding: 0.8rem 1.5rem; /*tamanho do botão*/
+    border-radius: 4px; /*cantos arredondados*/
+    font-weight: bold; /*texto em negrito*/
+    transition: background-color 0.3s ease; /*animação suave*/
 }
 
 .highlight .highlight-actions .btn-primary:hover {
-    background-color: #b8070f; /*cor de fundo do botão primário quando o mouse passar por cima*/
+    background-color: #b8070f; /*escurece no hover*/
 }
 
 .highlight .highlight-actions .btn-secundary {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3); 
-    padding: 0.8rem 1.5rem; /*espaçamento interno do botão secundário*/
-    border-radius: 4px; /*arredondamento dos cantos do botão secundário*/
-    transition: background-color 0.3s ease; /*transição suave para a cor de fundo do botão secundário*/
-    cursor: pointer; /*muda o cursor para pointer quando o mouse passar por cima do botão secundário*/
+    background-color: rgba(255, 255, 255, 0.2); /*botão transparente*/
+    color: #fff; /*texto branco*/
+    border: 1px solid rgba(255, 255, 255, 0.3); /*borda clara*/
+    padding: 0.8rem 1.5rem; /*tamanho do botão*/
+    border-radius: 4px; /*arredondamento*/
+    transition: background-color 0.3s ease; /*animação suave*/
 }
 
 .highlight .highlight-actions .btn-secundary:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3); /*fica mais claro no hover*/
 }
 
-/*footer - rodapé*/
+/* FOOTER - RODAPÉ */
