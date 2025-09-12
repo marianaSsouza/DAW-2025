@@ -79,12 +79,29 @@ main {
     background-image: url('../img/etT14XfDEqhQZdD47ywpyihXPyW.jpg'); /*imagem de fundo*/
     background-position: left calc((50vw -170px) - 340px) top; /*ajuste da posição do fundo*/
     background-size: cover; /*faz a imagem cobrir toda a área*/
+    position: relative; /*para o overlay funcionar*/
 }
+
+.highlight .highlight-overlay {
+    position: absolute; /*sobrepõe a imagem de fundo*/
+    top: 0;
+    left: 0;
+    width: 100%; /*cobre toda a largura*/
+    height: 100%; /*cobre toda a altura*/
+    z-index: 1; /*fica atrás do conteúdo*/
+    background-image: linear-gradient(to right,
+    rgba(17,17,17,1) calc((50vw - 70px) - 340px),
+    rgba(17,17,17, 0.7) 50%, 
+    rgba(17,17,17, 0.7) 100% );
+  
+}
+
 
 .highlight .highlight-content {
     display: flex; /*coloca poster e textos lado a lado*/
     gap: 2rem; /*espaçamento entre poster e texto*/
     padding: 2rem 0; /*espaçamento vertical*/
+    z-index: 2; /*fica acima do overlay*/
 }
 
 .highlight .highlight-poster {
@@ -124,6 +141,7 @@ main {
 }
 
 .highlight .highlight-sinopse h4 {
+    font-size: 1.5rem;
     font-weight: 400; /*peso normal*/
     padding-top: 3rem; /*espaço antes do subtítulo*/
     padding-bottom: 0.5rem; /*espaço abaixo*/
@@ -167,4 +185,116 @@ main {
     background-color: rgba(255, 255, 255, 0.3); /*fica mais claro no hover*/
 }
 
+.categories {
+    display: flex; /*alinha os itens na horizontal*/
+    background-color: #1c1c1c; /*mesma cor do fundo*/
+    border-bottom: 1px solid #333; /*linha de separação*/
+}
+
+.categories ol {
+   display: flex; /*alinha os itens na horizontal*/
+   gap: 2rem; /*espaçamento entre os itens. Ele precisa obrigatoriamente ter um dislay flex*/
+   list-style-type: none; /*remove os marcadores da lista*/;
+   padding: 1.5rem 0; /*espaçamento vertical entre os itens*/
+
+}
+
+.categories a { /*muda a parte de mais assistido, mais votados, mais novidades*/
+    color: #ccc; /*cor padrão dos links*/
+    text-decoration: none; /*remove sublinhado*/
+
+}
+
+.categories a.active {
+    color: #e50914;
+    border-bottom: 2px solid #e50914 ;
+}
+
+.categories a:hover { /*aqui é pra quando passar o cursor por cima e mudar a cor*/
+    color: #fff;
+}
+
+.categories a.active:hover { /*aqui é pra quando passar o cursor por cima, não vai mudar a cor apenas no mais assistidos*/
+    color: #e50914;
+}
+
+.movies { /*começar a mexer na parte de filmes*/
+    background-color: #1c1c1c;
+    padding: 2rem;
+    display: grid; /*muda a exibição para grid, usa pra quando voce quer posicionar e mnater espaçamento correto*/
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*cria colunas automáticas com largura mínima de 200px*/
+    gap: 2rem; /*espaçamento entre os cards*/
+}
+
+.movies .movie-card { /*cada um das imagen de filme*/
+   background-color: #222; /*cor de fundo do card*/
+   border-radius: 8px; /*arredondamento dos cantos*/
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /*sombra ao redor do card*/
+   overflow: hidden; /*corta qualquer conteúdo que ultrapasse os limites do card*/;
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /*animação suave para transformações e sombras*/
+
+}
+
+.movies .movie-card:hover { /*efeito de "inflar", dar profundidade no card*/
+    transform: translateY(-5px); /*levanta a sombra do card*/
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /*sombra maior ao redor do card*/
+    cursor: pointer; /*muda o cursor para indicar que é clicável*/
+
+}
+
+.movies .movie-card img { /*imagem do filme*/
+    width: 100%; /*imagem ocupa toda a largura do card*/
+    height: 300px; /*altura fixa para todas as imagens*/
+    object-fit: cover; /*corta a imagem para preencher o espaço sem distorcer, ajustando evitando espaços vazios*/
+    border-radius: 8px 8px 0 0; /*arredondamento apenas na parte superior*/
+}
+
+.movies .movie-card h3 { /*título do filme*/
+    padding: 1rem 1rem 0.5rem; /*espaçamento interno*/
+    font-weight: bold; /*negrito*/
+    font-size: 1.1rem; /*tamanho da fonte*/
+
+
+}
+
+.movies .movie-card p {
+    padding: 0rem 1rem 0.5rem; /*espaçamento interno*/
+    font-size: 0.9rem; /*tamanho da fonte*/
+
+}
+
 /* FOOTER - RODAPÉ */
+footer { 
+    background-color: #1c1c1c; /*cor de fundo do rodapé*/
+    border-top: 1px solid #333; /*linha de separação*/
+    padding: 3rem 0; /*espaçamento interno*/
+
+  
+}
+
+footer .container {
+   display: flex; /*alinha os itens na horizontal*/
+   align-items: center; /*alinha verticalmente ao centro*/
+   flex-direction: column; /*alinha os itens na vertical*/;
+
+}
+
+footer p { /*muda a cor do texto do rodapé*/
+   color: #a0a0a0; /*cor do texto*/
+   font-size: 0.8rem; /*tamanho menor*/
+}
+
+footer ul { /*muda a cor do link do rodapé*/
+  display: flex; /*alinha os itens na horizontal*/
+  list-style: none; /*remove os marcadores da lista*/
+  margin-top: 1rem; /*espaçamento acima da lista*/
+  gap: 0.8rem; /*espaçamento entre os itens*/
+}
+
+footer a { 
+    color: #a0a0a0; /*cor dos links*/
+}
+
+footer a:hover { /*muda a cor do link quando passa o cursor por cima*/
+    color: #fff; /*cor dos links*/
+}
