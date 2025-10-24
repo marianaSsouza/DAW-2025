@@ -1,0 +1,33 @@
+import { Facebook, Instagram, Youtube } from "lucide-react";
+import { FooterLink } from "../ui/footer-link";
+
+export function Footer(): JSX.Element {
+  return (
+    <footer className="bg-[#1c1c1c] border-t border-[#333] p">
+      <div className="my-0 mx-auto max-w-6xl flex flex-col items-center">
+        <p className="text-[#a0a0a0] text-xs">
+          The MovieBox 2025 - Todos os direitos reservados.
+        </p>
+        <ul className="flex list-none mt-4 gap-3">
+          <li>
+            <FooterLink>
+              <Facebook />
+            </FooterLink>
+          </li>
+
+          <li>
+            <FooterLink>
+              <Instagram />
+            </FooterLink>
+          </li>
+          <li>
+            <FooterLink>
+              <Youtube />
+            </FooterLink>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  );
+}
+
