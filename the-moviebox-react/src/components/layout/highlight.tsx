@@ -1,92 +1,58 @@
-import React from 'react';
+import type { FC } from "react";
 
-const Highlight: React.FC = () => {
+
+const Highlight: FC = () => {
   return (
-    <section 
-      className="flex bg-cover relative highlight"
+    <section
+      className="flex bg-cover relative"
       style={{
-        backgroundImage: "url('./public/img/etT14XfDEqhQZdD47ywpyihXPyW.jpg')",
+        backgroundImage: "url('/img/etT14XfDEqhQZdD47ywpyihXPyW.jpg')",
         backgroundPosition: 'left calc((50vw - 170px) - 340px) top',
+        backgroundSize: 'cover',
       }}
     >
-      <div 
-        className="absolute top-0 left-0 w-full h-full z-10 highlight-overlay"
+      <div
+        className="absolute inset-0 w-full h-full z-10"
         style={{
-          backgroundImage: 
+          backgroundImage:
             'linear-gradient(to right, rgba(17,17,17,1) calc((50vw - 70px) - 340px), rgba(17,17,17,0.7) 50%, rgba(17,17,17,0.7) 100%)',
         }}
       ></div>
 
-      <div className="highlight-content container flex gap-8 py-8 z-20">
+      <div className="container flex flex-col md:flex-row gap-8 py-8 z-20 max-w-6xl mx-auto px-4 md:px-8">
         <img
-          className="highlight-poster rounded-lg"
-          src="./public/img/q5pXRYTycaeW6dEgsCrd4mYPmxM.jpg"
-          alt="Capa do filme"
-          style={{ width: '340px', height: 'auto' }}
+          className="rounded-xl w-[360px] h-[500px] object-cover shadow-2xl z-20"
+          src="/img/q5pXRYTycaeW6dEgsCrd4mYPmxM.jpg"
+          alt="Capa do filme Como Treinar o Seu Dragão"
         />
 
-        <div className="highlight-details flex flex-col">
+        <div className="flex flex-col text-white z-20">
           <h2 className="text-4xl font-normal">Como Treinar o seu Dragão</h2>
 
-          <div className="highlight-meta text-sm my-2.5">
-            <span className="genre bg-white/20 px-3 py-1 rounded-full">Fantasia</span>
-            <span className="genre bg-white/20 px-3 py-1 rounded-full ml-2">Família</span>
-            <span className="genre bg-white/20 px-3 py-1 rounded-full ml-2">Ação & Aventura</span>
-            <span className="duration pl-4 text-[#ccc]">2h 5m</span>
+          <div className="text-sm my-3 flex flex-wrap items-center gap-2">
+            <span className="bg-white/20 px-3 py-1 rounded-full">Fantasia</span>
+            <span className="bg-white/20 px-3 py-1 rounded-full">Família</span>
+            <span className="bg-white/20 px-3 py-1 rounded-full">Ação &amp; Aventura</span>
+            <span className="pl-4 text-[#ccc]">2h 5m</span>
           </div>
 
-          <div className="highlight-sinopse flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <h4 className="text-2xl font-normal pt-12 pb-2">Sinopse</h4>
-            <p className="text-[#a0a0a0] text-sm">
-              Em um mundo onde dragões e humanos coexistem, um jovem viking chamado Soluço se
-              torna amigo de um dragão ferido chamado Banguela. Juntos, eles desafiam as tradições
+            <p className="text-[#a0a0a0] text-sm leading-relaxed max-w-xl">
+              Em um mundo onde dragões e humanos coexistem, um jovem viking chamado Soluço se torna
+              amigo de um dragão ferido chamado Banguela. Juntos, eles desafiam as tradições
               de suas tribos e descobrem que dragões não são os monstros que todos acreditavam ser.
             </p>
           </div>
 
-          <div className="highlight-actions flex gap-4 my-6">
-            <button 
-              className="
-                btn-primary 
-                bg-[#e50914] hover:bg-[#b8070f] 
-                text-white 
-                px-6 py-3 
-                rounded-md 
-                font-bold 
-                transition duration-300 ease-in-out 
-                cursor-pointer
-              "
-            >
+          <div className="flex gap-4 my-6">
+            <button className="bg-[#e50914] hover:bg-[#b8070f] text-white px-6 py-3 rounded font-bold transition duration-300 ease-in-out cursor-pointer">
               Assistir
             </button>
-            
-            <button 
-              className="
-                btn-secundary 
-                bg-white/20 hover:bg-white/30 
-                text-white 
-                border border-white/30 
-                px-6 py-3 
-                rounded-md 
-                transition duration-300 ease-in-out 
-                cursor-pointer
-              "
-            >
+            <button className="bg-white/20 hover:bg-white/30 text-white border border-white/30 px-6 py-3 rounded transition duration-300 ease-in-out cursor-pointer">
               Detalhes
             </button>
-
-            <button 
-              className="
-                btn-secundary 
-                bg-white/20 hover:bg-white/30 
-                text-white 
-                border border-white/30 
-                px-6 py-3 
-                rounded-md
-                transition duration-300 ease-in-out 
-                cursor-pointer
-              "
-            >
+            <button className="bg-white/20 hover:bg-white/30 text-white border border-white/30 px-6 py-3 rounded transition duration-300 ease-in-out cursor-pointer">
               + Adicionar à Lista
             </button>
           </div>
@@ -96,4 +62,4 @@ const Highlight: React.FC = () => {
   );
 };
 
-export default Highlight;
+export default Highlight;
